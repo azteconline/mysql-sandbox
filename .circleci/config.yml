@@ -5,10 +5,10 @@ jobs:
       - image: circleci/php:7.1-apache-node-browsers # The primary container where steps are run
       - image: circleci/mysql:8.0.4
         environment:
-          MYSQL_ROOT_PASSWORD: rootpw
-          MYSQL_DATABASE: test_db
-          MYSQL_USER: user
-          MYSQL_PASSWORD: passw0rd
+          MYSQL_ROOT_PASSWORD: Iwyuq2GPu3B0LhBj
+          MYSQL_DATABASE: sandbox
+          MYSQL_USER: root
+          MYSQL_PASSWORD: Iwyuq2GPu3B0LhBj
 
     steps:
       - checkout
