@@ -7,8 +7,8 @@ jobs:
         environment:
           MYSQL_ROOT_PASSWORD: rootpw
           MYSQL_DATABASE: sandbox
-          MYSQL_USER: root
-          MYSQL_PASSWORD: Iwyuq2GPu3B0LhBj
+          MYSQL_USER: robc
+          MYSQL_PASSWORD: J2VpBFZ2NxHpJk7B
 
     steps:
       - checkout
