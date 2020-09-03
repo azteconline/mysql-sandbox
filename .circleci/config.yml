@@ -7,12 +7,12 @@ jobs:
         environment:
           MYSQL_ROOT_PASSWORD: rootpw
           MYSQL_DATABASE: sandbox
-          MYSQL_USER: robc
-          MYSQL_PASSWORD: J2VpBFZ2NxHpJk7B
+          MYSQL_USER: user
+          MYSQL_PASSWORD: passw0rd
 
     steps:
       - checkout
-      - run: echo 'starting the db schnitzel'
+      - run: echo 'starting the db'
       - run:
       # Our primary container isn't MYSQL so run a sleep command until it's ready.
           name: Waiting for MySQL to be ready
@@ -28,8 +28,8 @@ jobs:
           name: Install MySQL CLI; Import dummy data; run an example query
           command: |
             sudo apt-get install default-mysql-client
-            mysql -h 127.0.0.1 -u user -ppassw0rd test_db < sql-data/dummy.sql
-            mysql -h 127.0.0.1 -u user -ppassw0rd --execute="SELECT * FROM test_db.Persons"
+            mysql -h 127.0.0.1 -u user -p passw0rd test_db < sql-data/dummy.sql
+            mysql -h 127.0.0.1 -u user -p passw0rd --execute="SELECT * FROM test_db.Persons"
 workflows:
   version: 2
   build-deploy:
